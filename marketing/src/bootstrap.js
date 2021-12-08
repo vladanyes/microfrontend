@@ -8,12 +8,12 @@ function mount(el) {
       <App />,
       el,
     );
+    console.warn('MarketingApp has been mounted!');
   }
 }
 
 if (process.env.NODE_ENV === 'development') {
   const el = document.querySelector('#marketing-root-id');
-  console.warn('MOUNTED, el', el);
   mount(el);
 }
 
