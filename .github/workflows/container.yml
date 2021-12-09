@@ -7,13 +7,16 @@ on:
     paths:
       - 'container/**'
 
-defaults:
-  run:
-    working-directory: ./container
+# defaults:
+#   run:
+#     working-directory: ./container
 
 jobs:
    build:
      runs-on: ubuntu-latest
+     defaults:
+      run:
+        working-directory: container
 
      steps:
  #      Load our code to the virtual machine.
