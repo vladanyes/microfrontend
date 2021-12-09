@@ -1,16 +1,15 @@
 import React from 'react';
-import MarketingApp from "./MarketingApp";
+import { BrowserRouter } from "react-router-dom";
+import MarketingApp from "./components/MarketingApp";
+import Header from "./components/Header";
 
 function App() {
 
   return (
-    <div>
-      <h1>
-        Container App
-      </h1>
-      <hr/>
+    <BrowserRouter>
+      <Header />
       <MarketingApp />
-    </div>
+    </BrowserRouter>
   );
 }
 
