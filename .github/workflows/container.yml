@@ -14,16 +14,18 @@ on:
 jobs:
    build:
      runs-on: ubuntu-latest
-     defaults:
-      run:
-        working-directory: container
 
      steps:
  #      Load our code to the virtual machine.
  #      It is an official GitHub Action used to check out a repository so a workflow can access it.
        - uses: actions/checkout@v2
-       - run: npm install
-       - run: npm run build
+       - name: Install
+         working-directory: container
+         run: npm install
+
+       - name: Build
+         working-directory: container
+         run: npm run build
 
  #     AWS service CLI actions
  #     https://github.com/chrislennon/action-aws-cli
