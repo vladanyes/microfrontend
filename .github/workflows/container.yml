@@ -20,12 +20,12 @@ jobs:
  #      It is an official GitHub Action used to check out a repository so a workflow can access it.
        - uses: actions/checkout@v2
        - name: Install
-         working-directory: ./container
-         run: npm install
+#          working-directory: ./container
+         run: cd container && npm install
 
        - name: Build
-         working-directory: ./container
-         run: npm run build
+#          working-directory: ./container
+         run: cd container && npm run build
 
  #     AWS service CLI actions
  #     https://github.com/chrislennon/action-aws-cli
