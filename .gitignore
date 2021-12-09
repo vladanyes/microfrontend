@@ -11,6 +11,10 @@
 /.sert
 
 marketing/node_modules
+marketing/dist
 dashboard/node_modules
+dashboard/dist
 container/node_modules
+container/dist
 auth/node_modules
+auth/dist
